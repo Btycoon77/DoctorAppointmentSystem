@@ -20,7 +20,7 @@ const ApplyDoctor = () => {
     try {
         console.log(values);
         dispatch(showLoading());
-        const res = await axios.post('/api/v1/user/apply-doctor',{...values,
+        const res = await axios.post('http://localhost:8000/api/v1/user/apply-doctor',{...values,
         timings:[
           moment(values.timings[0]).format("HH:mm"),
           moment(values.timings[1]).format("HH:mm"),

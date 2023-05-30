@@ -8,7 +8,7 @@ const adminRouter = require('./routes/adminRoute');
 const doctorRouter = require('./routes/doctorRoute');
 
 const app = express();
-const port = process.env.PORT || 8080;
+const port = process.env.PORT || 8000;
 
 app.use(express.json());
 app.use(morgan('dev'));

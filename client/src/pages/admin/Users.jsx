@@ -2,14 +2,14 @@ import { message, Table } from "antd";
 import React, { useState, useEffect } from "react";
 import Layout from "../../components/Layout";
 import axios from "axios";
-
+import {backend} from "../../utils/CONSTANTS"
 const Users = () => {
   const [users, setusers] = useState([]);
 
   //  get users;
   const getusers = async () => {
     try {
-      const res = await axios.get("/api/v1/admin/getAllUsers", {
+      const res = await axios.get(`${backend}api/v1/admin/getAllUsers`, {
         headers: {
           Authorization: `Bearer ${localStorage.getItem("token")}`,
         },

@@ -10,7 +10,7 @@ const Appointment = () => {
   const handleCancel = async (text, record) => {
     try {
       const res = await axios.post(
-        "/api/v1/user/cancel-appointment",
+        "http://localhost:8000/api/v1/user/cancel-appointment",
         {
           doctorId: record.doctorId,
           userId: record.userId,
@@ -35,7 +35,7 @@ const Appointment = () => {
 
   const getAppointments = async () => {
     try {
-      const res = await axios.get("/api/v1/user/user-appointments", {
+      const res = await axios.get("http://localhost:8000/api/v1/user/user-appointments", {
         headers: {
           Authorization: `Bearer ${localStorage.getItem("token")}`,
         },

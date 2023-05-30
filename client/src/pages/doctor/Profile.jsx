@@ -36,7 +36,7 @@ const Profile = () => {
      console.log(startTime,endTime);
       dispatch(showLoading());
       const res = await axios.put(
-        "/api/v1/doctor/updateProfile",
+        "http://localhost:8000/api/v1/doctor/updateProfile",
         {
           ...values,
           userId: user._id,
@@ -70,7 +70,7 @@ const Profile = () => {
   const getDoctorInfo = async () => {
     try {
       const res = await axios.post(
-        "/api/v1/doctor/getDoctorInfo",
+        "http://localhost:8000/api/v1/doctor/getDoctorInfo",
         {
           userId: params.id,
         },

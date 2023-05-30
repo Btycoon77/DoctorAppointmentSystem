@@ -52,8 +52,8 @@ const Layout = ({ children }) => {
         icon:"fa-solid fa-user"
     },
     {
-      name:'Recommend doctor',
-      path:'/recommend-doctor',
+      name:'Predict Heart Disease',
+      path:'/predict-heartDisease',
       icon:'fa-solid fa-user-doctor'
   },
   

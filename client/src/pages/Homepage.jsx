@@ -12,7 +12,7 @@ const Homepage = () => {
   const getUserData = async () => {
     try {
       const res = await axios.get(
-        "/api/v1/user/getAllDoctors",
+        "http://localhost:8000/api/v1/user/getAllDoctors",
 
         {
           headers: {

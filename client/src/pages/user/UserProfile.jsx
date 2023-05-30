@@ -24,7 +24,7 @@ const UserProfile = () => {
       console.log(values);
       dispatch(showLoading());
       const res = await axios.put(
-        "/api/v1/user/updateProfile",
+        "http://localhost:8000/api/v1/user/updateProfile",
         {
           ...values,
           userId: user._id,
@@ -55,7 +55,7 @@ const UserProfile = () => {
   const getUserInfo = async () => {
     try {
       const res = await axios.post(
-        "/api/v1/user/getUserInfo",
+        "http://localhost:8000/api/v1/user/getUserInfo",
         {
           userId: params.id,
         },

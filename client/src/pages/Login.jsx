@@ -13,7 +13,7 @@ const Login = () => {
   const onFinishHandler = async (values) => {
     try {
       dispatch(showLoading());
-      const res = await axios.post("api/v1/user/login", values, {
+      const res = await axios.post("http://localhost:8000/api/v1/user/login", values, {
         headers: {
           "Content-Type": "application/json",
         },

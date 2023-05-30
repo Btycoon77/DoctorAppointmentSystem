@@ -16,7 +16,7 @@ import BookingPage from "./pages/BookingPage";
 import Appointment from "./pages/Appointment";
 import DoctorAppointments from "./pages/doctor/DoctorAppointments";
 import UserProfile from "./pages/user/UserProfile";
-import RecommendDoctor from "./pages/user/RecommendDoctor";
+import HeartDiseasePrediction from "./algorithm/Heart_Disease_Prediction";
 
 function App() {
   const { loading } = useSelector((state) => state.alerts);
@@ -39,39 +39,39 @@ function App() {
               path="/apply-doctor"
               element={
                 <ProtectedRoute>
-                  <ApplyDoctor/>
+                  <ApplyDoctor />
                 </ProtectedRoute>
               }
             />
-             <Route
+            <Route
               path="/notification"
               element={
                 <ProtectedRoute>
-                  <NotificationPage/>
+                  <NotificationPage />
                 </ProtectedRoute>
               }
             />
-              <Route
+            <Route
               path="/admin/users"
               element={
                 <ProtectedRoute>
-                  <Users/>
+                  <Users />
                 </ProtectedRoute>
               }
             />
-             <Route
+            <Route
               path="/doctor/profile/:id"
               element={
                 <ProtectedRoute>
-                  <Profile/>
+                  <Profile />
                 </ProtectedRoute>
               }
             />
-             <Route
+            <Route
               path="/user/profile/:id"
               element={
                 <ProtectedRoute>
-                  <UserProfile/>
+                  <UserProfile />
                 </ProtectedRoute>
               }
             />
@@ -79,15 +79,15 @@ function App() {
               path="/appointments"
               element={
                 <ProtectedRoute>
-                  <Appointment/>
+                  <Appointment />
                 </ProtectedRoute>
               }
             />
             <Route
-              path="/recommend-doctor"
+              path="/predict-heartDisease"
               element={
                 <ProtectedRoute>
-                  <RecommendDoctor/>
+                  <HeartDiseasePrediction />
                 </ProtectedRoute>
               }
             />
@@ -95,7 +95,7 @@ function App() {
               path="/doctor-appointments"
               element={
                 <ProtectedRoute>
-                  <DoctorAppointments/>
+                  <DoctorAppointments />
                 </ProtectedRoute>
               }
             />
@@ -103,15 +103,15 @@ function App() {
               path="/doctor/book-appointment/:doctorId"
               element={
                 <ProtectedRoute>
-                  <BookingPage/>
+                  <BookingPage />
                 </ProtectedRoute>
               }
             />
-              <Route
+            <Route
               path="/admin/doctors"
               element={
                 <ProtectedRoute>
-                  <Doctors/>
+                  <Doctors />
                 </ProtectedRoute>
               }
             />
